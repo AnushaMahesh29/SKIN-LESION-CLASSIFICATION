@@ -10,9 +10,13 @@ Original Data Source: https://challenge2018.isic-archive.com
 
 ## Code Overview
 
-- skin_lesion_classification.ipynb: Jupyter Notebook containing the Python code for data preprocessing, model training, and evaluation.
+- UsingMLModels_.ipynb, UsingCNNModel .ipynb: Jupyter Notebook containing the Python code for data preprocessing, model training, and evaluation.
 - HAM10000_metadata.csv: CSV file containing metadata for the images.
-- HAM10000_images/: Directory containing the skin lesion images.
+- HAM10000_images_part1, HAM10000_images_part2: Directory containing the skin lesion images.(since it is a very large dataset, it is not been added to the repository) 
+- hmnist_28_28_L.csv: Pixel data for skin lesion images in grayscale (28x28 pixels).
+- hmnist_28_28_RGB.csv: Pixel data for skin lesion images in RGB color (28x28 pixels).
+- hmnist_8_8_L.csv: Pixel data for skin lesion images in grayscale at a reduced resolution (8x8 pixels).
+- hmnist_8_8_RGB.csv: Pixel data for skin lesion images in RGB color at a reduced resolution (8x8 pixels).
 
 ## Dependencies
 
@@ -26,19 +30,19 @@ Original Data Source: https://challenge2018.isic-archive.com
 - scikit-learn
 - imbalanced-learn
 - OpenCV
-- TensorFlow/Keras (if using deep learning models)
+- TensorFlow/Keras 
 
 ## Usage
 
-1. Clone the repository:
+1. Create the repository
 2. Install the dependencies
 3. Run the Jupyter Notebook skin_lesion_classification.ipynb to execute the code step by step.
 4. Follow the instructions provided in the notebook to load the dataset, preprocess the images, train machine learning models (e.g., K-Nearest Neighbors, Support Vector Machine, Random Forest), and evaluate their performance.
 
 ## Results
 
-The trained models are evaluated using accuracy score, confusion matrix, and classification report. The performance metrics provide insights into the effectiveness of each model in classifying skin lesions.'Support Vector Machine' gave highest accuracy of 91.5%.
+The trained models are evaluated using accuracy score, confusion matrix, and classification report. The performance metrics provide insights into the effectiveness of each model in classifying skin lesions.In ML models ,'Support Vector Machine' gave highest accuracy of 91.5%. In DL models 'Convolutional Neural Network' gave accuracy of 94%.
 
 ## Conclusion
 
-In this project, we explored different traditional machine learning models for skin lesion classification and evaluated their performance using the HAM10000 dataset. The results demonstrate the potential of machine learning in assisting dermatologists in diagnosing skin lesions.
+While traditional models showed promising results, the CNN model exceeded them by obtaining an amazing 94% accuracy. These findings highlight the potential of machine learning, particularly CNNs, to help dermatologists accurately diagnose skin lesions.
